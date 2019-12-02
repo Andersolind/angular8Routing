@@ -1,1 +1,26 @@
-<p>customer-dashboard works!</p>
+<mat-toolbar color="primary">
+  MatListNav Menu Item
+</mat-toolbar>
+<div class="basic-container">
+  <mat-nav-list>
+    <mat-list-item (click)="menuTrigger.openMenu()" *ngFor="let i of data">
+      <div mat-line>
+        {{ i.name }}
+      </div>
+      <p mat-line>
+        {{ i.email }}
+      </p>
+      <button
+        mat-icon-button
+        #menuTrigger="matMenuTrigger"
+        [matMenuTriggerFor]="menu"
+      >
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </mat-list-item>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>View profile</button>
+      <button mat-menu-item>Add contact</button>
+    </mat-menu>
+  </mat-nav-list>
+</div>
