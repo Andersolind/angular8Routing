@@ -1,6 +1,3 @@
-<mat-toolbar color="primary">
-  MatListNav Menu Item
-</mat-toolbar>
 <div class="basic-container">
   <mat-nav-list>
     <mat-list-item (click)="menuTrigger.openMenu()" *ngFor="let i of data">
@@ -20,7 +17,7 @@
     </mat-list-item>
     <mat-menu #menu="matMenu">
       <button mat-menu-item>View profile</button>
-      <button mat-menu-item>Add contact</button>
+      <button mat-menu-item>Edit Profile</button>
     </mat-menu>
   </mat-nav-list>
 </div>
