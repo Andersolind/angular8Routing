@@ -34,4 +34,12 @@ describe("CustomerDashboardComponent", () => {
     expect(component).toBeTruthy();
     component.mockJobs();
   });
+
+  it("should call the mockJobs method", async(() => {
+    spyOn(component, "mockJobs");
+    component.mockJobs();
+    fixture.whenStable().then(() => {
+      expect(component.mockJobs).toHaveBeenCalled();
+    });
+  }));
 });

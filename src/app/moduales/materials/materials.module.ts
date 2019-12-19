@@ -6,8 +6,13 @@ import {
   MatMenuModule,
   MatSidenavModule,
   MatListModule,
-  MatButtonModule
+  MatButtonModule,
+  MatLabel,
+  MatFormFieldModule,
+  MatSnackBarModule,
+  MatInputModule
 } from "@angular/material";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [],
@@ -18,7 +23,10 @@ import {
     MatIconModule,
     MatSidenavModule,
     MatToolbarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatInputModule,
+    MatSnackBarModule,
+    MatFormFieldModule
   ],
   exports: [
     MatToolbarModule,
@@ -26,9 +34,14 @@ import {
     MatListModule,
     MatButtonModule,
     MatIconModule,
+    MatSnackBarModule,
     MatSidenavModule,
     MatToolbarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatInputModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class MaterialsModule {}
