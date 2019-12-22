@@ -7,7 +7,6 @@ import {
   MatSidenavModule,
   MatListModule,
   MatButtonModule,
-  MatLabel,
   MatFormFieldModule,
   MatSnackBarModule,
   MatInputModule
