@@ -1,98 +1,111 @@
-<form [formGroup]="jobForm" class="my-form">
-  <div class="row">
-    <div class="col-lg-12">
-      <mat-form-field class="stretch-height">
-        <mat-label>Job Number</mat-label>
-        <input
-          jobNumber="jobNumber"
-          formControlName="jobNumber"
-          matInput
-          placeholder="jobNumber"
-          name="jobNumber"
-        />
-        <mat-error *ngIf="f.phone.errors?.required">
-          Job Number is required
-        </mat-error>
-      </mat-form-field>
-    </div>
-    <div class="col-lg-12">
-      <mat-form-field class="full-width">
-        <mat-label>Job Name</mat-label>
-        <input
-          jobName="jobName"
-          formControlName="jobName"
-          required
-          matInput
-          placeholder="JobName"
-          name="jobName"
-        />
-        <mat-error
-          *ngIf="f.jobName.errors?.required || !f.jobName.errors?.jobName"
-        >
-          Job Name is required
-        </mat-error>
-      </mat-form-field>
-    </div>
-    <div class="col-lg-12">
-      <mat-form-field class="full-width">
-        <mat-label>Address</mat-label>
-        <input
-          address="address"
-          formControlName="address"
-          matInput
-          placeholder="address"
-          name="address"
-        />
-        <mat-error *ngIf="f.address.errors?.required">
-          Address is required
-        </mat-error>
-      </mat-form-field>
-    </div>
-    <div class="col-lg-12">
-      <mat-form-field class="full-width">
-        <mat-label>Client Name</mat-label>
-        <input
-          clientName="clientName"
-          formControlName="clientName"
-          matInput
-          placeholder="Client Name"
-          name="clientName"
-        />
-        <mat-error *ngIf="f.clientName.errors?.required">
-          Client Name is required
-        </mat-error>
-      </mat-form-field>
-    </div>
-    <div class="col-lg-12">
-      <mat-form-field class="stretch-height">
-        <mat-label>Notes</mat-label>
-        <textarea
-          notes="notes"
-          formControlName="notes"
-          matInput
-          placeholder="notes"
-          name="notes"
-        ></textarea>
-        <mat-error *ngIf="f.notes.errors?.required">
-          Notes is required
-        </mat-error>
-      </mat-form-field>
-    </div>
-    <div class="col-lg-12">
-      <mat-form-field class="stretch-height">
-        <mat-label>Site contact</mat-label>
-        <input
-          phone="phone"
-          formControlName="phone"
-          matInput
-          placeholder="phone"
-          name="phone"
-        />
-        <mat-error *ngIf="f.phone.errors?.required">
-          Site Contact Name is required
-        </mat-error>
-      </mat-form-field>
-    </div>
-  </div>
-  <button mat-raised-button (click)="save()" color="primary">Add Job</button>
+<!-- start form -->
+<form [formGroup]="jobForm">
+  <mat-card fxFlex="20%">
+    <mat-card-title>Login</mat-card-title>
+
+    <mat-card-content fxLayout="column">
+      <div
+        class="container"
+        fxLayout="row"
+        fxLayout.xs="column"
+        fxLayoutWrap
+        fxLayoutGap="0.5%"
+        fxLayoutAlign="center"
+      >
+        <mat-form-field class="stretch-height">
+          <mat-label>Job Number</mat-label>
+          <input
+            jobNumber="jobNumber"
+            formControlName="jobNumber"
+            matInput
+            placeholder="jobNumber"
+            name="jobNumber"
+          />
+          <mat-error *ngIf="f.phone.errors?.required">
+            Job Number is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-lg-12">
+        <mat-form-field class="full-width">
+          <mat-label>Job Name</mat-label>
+          <input
+            jobName="jobName"
+            formControlName="jobName"
+            required
+            matInput
+            placeholder="JobName"
+            name="jobName"
+          />
+          <mat-error
+            *ngIf="f.jobName.errors?.required || !f.jobName.errors?.jobName"
+          >
+            Job Name is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-lg-12">
+        <mat-form-field class="full-width">
+          <mat-label>Address</mat-label>
+          <input
+            address="address"
+            formControlName="address"
+            matInput
+            placeholder="address"
+            name="address"
+          />
+          <mat-error *ngIf="f.address.errors?.required">
+            Address is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-lg-12">
+        <mat-form-field class="full-width">
+          <mat-label>Client Name</mat-label>
+          <input
+            clientName="clientName"
+            formControlName="clientName"
+            matInput
+            placeholder="Client Name"
+            name="clientName"
+          />
+          <mat-error *ngIf="f.clientName.errors?.required">
+            Client Name is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-lg-12">
+        <mat-form-field class="stretch-height">
+          <mat-label>Notes</mat-label>
+          <textarea
+            notes="notes"
+            formControlName="notes"
+            matInput
+            placeholder="notes"
+            name="notes"
+          ></textarea>
+          <mat-error *ngIf="f.notes.errors?.required">
+            Notes is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-lg-12">
+        <mat-form-field class="stretch-height">
+          <mat-label>Site contact</mat-label>
+          <input
+            phone="phone"
+            formControlName="phone"
+            matInput
+            placeholder="phone"
+            name="phone"
+          />
+          <mat-error *ngIf="f.phone.errors?.required">
+            Site Contact Name is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <button mat-raised-button (click)="save()" color="primary">Add Job</button>
+  </mat-card>
 </form>
+<!-- end form -->
