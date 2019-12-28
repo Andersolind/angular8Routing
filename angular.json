@@ -128,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "HRSApp"
+  "defaultProject": "HRSApp",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
