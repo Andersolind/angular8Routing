@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { CustomerDashboardComponent } from "./customer-dashboard.component";
-import { IJobSignUp } from "src/models/dashboard.modal";
+import { IJobSignUp } from "src/app/models/dashboard.modal";
 import { MaterialsModule } from "../../materials/materials.module";
 
 describe("CustomerDashboardComponent", () => {

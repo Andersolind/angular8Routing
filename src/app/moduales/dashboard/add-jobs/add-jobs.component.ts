@@ -1,6 +1,6 @@
 import { Component, OnInit, NgZone } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
-import { IJobSignUp } from "src/models/dashboard.modal";
+import { IJobSignUp } from "src/app/models/dashboard.modal";
 import { MatSnackBar } from "@angular/material";
 
 @Component({
@@ -11,6 +11,7 @@ import { MatSnackBar } from "@angular/material";
 export class AddJobsComponent implements OnInit {
   jobForm: FormGroup;
   addJob: IJobSignUp;
+  errors = this.jobForm.controls;
   constructor(
     private fb: FormBuilder,
     private snackBar: MatSnackBar,
@@ -53,6 +54,7 @@ export class AddJobsComponent implements OnInit {
         phone: this.jobForm.controls["phone"].value,
         jobNumber: this.jobForm.controls["jobNumber"].value
       };
+      this.openSnackBar();
       //   this.authService.createJobSite(this.addJob).subscribe(data => {
       //     if (data) {
       //       this.openSnackBar();

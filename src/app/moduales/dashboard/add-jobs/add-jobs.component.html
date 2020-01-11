@@ -1,8 +1,8 @@
 <!-- start form -->
 <form [formGroup]="jobForm">
   <mat-card fxFlex="20%">
-    <mat-card-title>Login</mat-card-title>
-
+    <mat-card-title>Add Job</mat-card-title>
+    <!-- start card  -->
     <mat-card-content fxLayout="column">
       <div
         class="container"
@@ -21,7 +21,7 @@
             placeholder="jobNumber"
             name="jobNumber"
           />
-          <mat-error *ngIf="f.phone.errors?.required">
+          <mat-error *ngIf="errors.phone.errors?.required">
             Job Number is required
           </mat-error>
         </mat-form-field>
@@ -105,6 +105,7 @@
         </mat-form-field>
       </div>
     </mat-card-content>
+    <!-- end card -->
     <button mat-raised-button (click)="save()" color="primary">Add Job</button>
   </mat-card>
 </form>

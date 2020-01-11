@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { VERSION, MatMenuTrigger, } from "@angular/material";
-import { Materials, IJobSignUp } from "src/models/dashboard.modal";
+import { VERSION, MatMenuTrigger } from "@angular/material";
+import { Materials, IJobSignUp } from "src/app/models/dashboard.modal";
 
 @Component({
   selector: "app-customer-dashboard",
