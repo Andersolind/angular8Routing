@@ -11,16 +11,16 @@ import { MatSnackBar } from "@angular/material";
 export class AddJobsComponent implements OnInit {
   jobForm: FormGroup;
   addJob: IJobSignUp;
-  errors = this.jobForm.controls;
+
   constructor(
     private fb: FormBuilder,
     private snackBar: MatSnackBar,
     private zone: NgZone
-  ) {
+  ) {}
+
+  ngOnInit() {
     this.createForm();
   }
-
-  ngOnInit() {}
   openSnackBar() {
     this.zone.run(() => {
       this.snackBar.open(
