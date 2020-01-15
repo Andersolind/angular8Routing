@@ -6,6 +6,7 @@ import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialsModule } from "./moduales/materials/materials.module";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { RootStoreModule } from './root-store/root-store.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,7 +16,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     FlexLayoutModule,
 
     BrowserAnimationsModule,
-    MaterialsModule
+    MaterialsModule,
+    RootStoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
