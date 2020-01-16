@@ -17,7 +17,7 @@ export class JobService {
   /**
    * Get Jobs list
    */
-  getJobs(): Observable<any> {
+  getJobs(): Observable<JobSignUp[]> {
     let getJobsUrl = "/jobs";
 
     return this.http.get<JobSignUp[]>(`${this.baseUrl}${getJobsUrl}`).pipe(
