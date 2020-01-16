@@ -9,7 +9,7 @@ import { JobService } from "src/app/services/jobs.service";
 import { JobSignUp } from "src/app/models/jobs.modal";
 
 @Injectable()
-export class ToDoEffects {
+export class PurchaseEffects {
   constructor(private jobsService: JobService, private action$: Actions) {}
 
   @Effect()
