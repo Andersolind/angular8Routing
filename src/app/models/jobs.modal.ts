@@ -1,12 +1,12 @@
 import { HttpHeaders } from "@angular/common/http";
 
 export interface IJobSignUp {
-  jobName: string;
-  address: string;
-  clientName: string;
-  notes: string;
-  phone: string;
-  jobNumber: string;
+  jobName?: string;
+  address?: string;
+  clientName?: string;
+  notes?: string;
+  phone?: string;
+  jobNumber?: string;
 }
 
 export class HttpRes {

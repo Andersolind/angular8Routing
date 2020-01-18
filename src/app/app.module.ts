@@ -5,8 +5,8 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialsModule } from "./moduales/materials/materials.module";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RootStoreModule } from "./root-store/root-store.module";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,6 +14,7 @@ import { RootStoreModule } from "./root-store/root-store.module";
     BrowserModule,
     AppRoutingModule,
     FlexLayoutModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MaterialsModule,
     RootStoreModule
