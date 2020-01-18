@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialsModule } from "./moduales/materials/materials.module";
 import { RootStoreModule } from "./root-store/root-store.module";
 import { HttpClientModule } from "@angular/common/http";
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,7 +18,10 @@ import { HttpClientModule } from "@angular/common/http";
     HttpClientModule,
     BrowserAnimationsModule,
     MaterialsModule,
-    RootStoreModule
+    RootStoreModule,
+    StoreDevtoolsModule.instrument({
+      maxAge: 10
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -33,8 +33,6 @@ Purchase ordering procedure:
 
 Step 1 – Foreman will request specific material to be ordered
 
-
-
 Step 2– I will request a PO from Heather.
 
 Example:
@@ -89,3 +87,7 @@ Paper copy of invoice is hard filed into our file storage and kept for 7 – 10 
 
 *I have attached the actual invoice for this order to help you understand the process. Please call me if you have any further questions. Thank you
 ```
+
+### Cool commands
+
+git clean -f -d
