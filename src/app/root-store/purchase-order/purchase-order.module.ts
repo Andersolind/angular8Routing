@@ -9,7 +9,7 @@ import { PurchaseEffects } from "./purchase.effects";
   declarations: [],
   imports: [
     CommonModule,
-    StoreModule.forRoot({ jobs: PurchaceReducer }),
+    StoreModule.forFeature("purchace", PurchaceReducer),
     EffectsModule.forRoot([PurchaseEffects])
   ]
 })

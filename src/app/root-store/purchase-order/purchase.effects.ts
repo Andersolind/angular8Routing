@@ -13,7 +13,7 @@ export class PurchaseEffects {
 
   getJobs$ = createEffect(() =>
     this.action$.pipe(
-      ofType(PurchaseActions.GetJobsAction),
+      ofType(PurchaseActions.BeginGetJobsAction),
       mergeMap(() =>
         this.jobsService.getJobs().pipe(
           map((jobs: JobSignUp[]) => {

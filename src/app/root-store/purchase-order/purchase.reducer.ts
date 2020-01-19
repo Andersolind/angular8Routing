@@ -9,7 +9,7 @@ export const intialState = initializeState();
 
 const reducer = createReducer(
   intialState,
-  on(PurchaseActions.BeginCreateToDoAction, state => state),
+  on(PurchaseActions.GetJobsAction, state => state),
   on(PurchaseActions.CreateJobsAction, (state: JobsState, jobs: JobSignUp) => {
     return { ...state, Jobs: [...state.Jobs, jobs], JobErrors: null };
   }),
